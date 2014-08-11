@@ -4,7 +4,7 @@ plot2 <- function(data=NULL) {
     if(is.null(data))
         data <- loaddata()
 
-    png("plot2.png", width=400, height=400)
+    png("plot2.png", width=504, height=504)
     plot(data$Time, data$Global_active_power,
          type="l",
          xlab="",

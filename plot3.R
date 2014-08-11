@@ -4,7 +4,7 @@ plot3 <- function(data=NULL) {
     if(is.null(data))
         data <- loaddata()
 
-    png("plot3.png", width=400, height=400)
+    png("plot3.png", width=504, height=504)
     plot(data$Time, data$Sub_metering_1, type="l", col="black",
          xlab="", ylab="Energy sub metering")
     lines(data$Time, data$Sub_metering_2, col="red")

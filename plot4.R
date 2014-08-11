@@ -4,7 +4,7 @@ plot4 <- function(data=NULL) {
     if(is.null(data))
         data <- loaddata()
 
-    png("plot4.png", width=400, height=400)
+    png("plot4.png", width=504, height=504)
     par(mfrow=c(2,2))
     # plot diagram1 
     plot(data$Time, data$Global_active_power,
@@ -22,10 +22,10 @@ plot4 <- function(data=NULL) {
     legend("topright",
            col=c("black", "red", "blue"),
            c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
-           lty=1,
+           lty=1, bty="n",
            box.lwd=0)
     # plot diagram4
-    plot(data$Time, data$Global_reactive_power, type="n",
+    plot(data$Time, data$Global_reactive_power, type="l",
          xlab="datetime", ylab="Global_reactive_power")
     lines(data$Time, data$Global_reactive_power)
     
